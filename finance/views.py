@@ -3,5 +3,5 @@ from django.shortcuts import render, HttpResponse
 # Create your views here.
 
 
-def say_hello(request):
-    return HttpResponse("Hello!")
+def get_finance(request):
+    return render(request, "finance/finance_list.html")
