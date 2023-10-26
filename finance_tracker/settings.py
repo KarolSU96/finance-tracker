@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ['8000-karolsu96-finance-tracke-jxuj07couj.us2.codeanyapp.com',
-                 'financial-plannero.herokuapp.com', 'localhost']
+                 'localhost', 'financial-plannero-4a862bf56c00.herokuapp.com']
 
 
 # Application definition
