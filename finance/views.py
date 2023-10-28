@@ -7,4 +7,7 @@ class PlanList(generic.ListView):
     model = Plan
     queryset = Plan.objects
     template_name ='home.html'
-    paginate_by = 20
+    paginate_by = 22
+
+    def get_queryset(self):
+        return Plan.objects.all()
