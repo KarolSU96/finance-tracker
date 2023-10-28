@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+    <div class="row mb-4">
+        <h2> {{ plan.name }}</h2>
+        <p>Budget: {{ plan.budget }}€</p>
+        <p>Spent: {{ plan.total_spent }}</p>
+        <p>Remaining: {{ plan.budget|sub:plan.total_spent }}</p>
+        <p>Created on: {{ plan.created_on|date:"F j, Y" }}</p>
+    </div>
+</div>
+
+
+
+
+{% endblock %}
