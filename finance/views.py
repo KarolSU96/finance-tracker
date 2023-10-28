@@ -13,9 +13,10 @@ class PlanList(generic.ListView):
         return Plan.objects.all()
 
 class PlanDetail(View):
-
+    template_name = 'plan_details.html'
     def get(self, request, slug, *args, ** kwargs):
-        queryset = Plan.objects
-        plan = get_object_or_404(queryse, slug=slug)
+        queryset = Plan.objects.all()
+        plan = get_object_or_404(queryset, slug=slug)
+        plan.remaining = plan.budget - plan.total_spent
+        return render(request, self.template_name, {'plan': plan})
         
-

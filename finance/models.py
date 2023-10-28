@@ -10,6 +10,7 @@ class Plan(models.Model):
     slug = models.SlugField(max_length=200, unique=True)
     description = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
+    total_spent = 1
 
     class Meta:
         ordering = ['-created_on']
