@@ -10,13 +10,17 @@ class Plan(models.Model):
     slug = models.SlugField(max_length=200, unique=True)
     description = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
-    total_spent = 1
 #  Modify total spent later!!!!
+
     class Meta:
         ordering = ['-created_on']
 
     def __str__(self):
         return self.name
+
+    @property
+    def total_spent(self):
+        return self.transaction_set.aggregate(models.Sum('amount'))['amount__sum'] or 0
 
 
 class Category(models.Model):
@@ -42,3 +46,9 @@ class Transaction(models.Model):
 
     def __str__(self):
         return f"{self.plan.user.username} - {self.plan.name} - {self.category.name} - €{self.amount} - {self.date.strftime('%Y-%m-%d')} "
+    
+    def save_amount(self):
+        self.plan.total_spent += self.amount
+        self.plan.save()
+
+        super().save(*args,**kwargs)
