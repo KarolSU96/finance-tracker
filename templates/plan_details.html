@@ -13,7 +13,31 @@
     </div>
 </div>
 
+<hr>
 
+<div  id="transaction-table">
+    <table class="table">
+        <thead>
+            <th scope="col">#</th>
+            <th scope="col">Category</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Date</th>
+            <th scope="col">Description</th>
+        </thead>
+        <tbody>
+            {% for transaction in transactions %}
+            <tr>
+                <th scope="row"> {{ forloop.counter }}</th>
+                <td>{{ transaction.category }}</td>
+                <td>{{ transaction.amount }}</td>
+                <td>{{ transaction.created_on }}</td>
+                <td>{{ transaction.description }}</td>
+                
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
 
 
 {% endblock %}
