@@ -20,7 +20,7 @@ class PlanDetail(View):
         plan.remaining = plan.budget - plan.total_spent
         transactions = Transaction.objects.filter(plan=plan)
 
-        context= {
+        context = {
             'plan': plan,
             'transactions': transactions,
         }
