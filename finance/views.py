@@ -27,3 +27,6 @@ class PlanDetail(View):
 
         return render(request, self.template_name, context)
         
+
+class Register(View):
+    template_name = 'register.html'
