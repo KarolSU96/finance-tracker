@@ -69,5 +69,3 @@ class PlanDetail(View):
 
 class Register(View):
     template_name = 'register.html'
-
-
