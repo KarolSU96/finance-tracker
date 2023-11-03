@@ -3,7 +3,6 @@
 {% block content %}
 
 <div class="container mt-5">
-
     <div class="row mb-4">
         <h2> {{ plan.name }}</h2>
         <p>Budget: {{ plan.budget }}€</p>
@@ -16,30 +15,38 @@
 <hr>
 
 <div  id="transaction-table">
-    <table class="table">
-        <thead>
-            <th scope="col">#</th>
-            <th scope="col">Category</th>
-            <th scope="col">Amount</th>
-            <th scope="col">Date</th>
-            <th scope="col">Description</th>
-        </thead>
-        <tbody>
-            {% for transaction in transactions %}
-            <tr>
-                <th scope="row"> {{ forloop.counter }}</th>
-                <td>{{ transaction.category }}</td>
-                <td>{{ transaction.amount }}</td>
-                <td>{{ transaction.created_on }}</td>
-                <td>{{ transaction.description }}</td>
-                
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addTransactionModalLabel">
-        Add Transaction
-    </button>
+    <form method="post" action="{% url 'plan_detail' slug=plan.slug %}">
+        {% csrf_token %}
+        <table class="table">
+            <thead>
+                <th scope="col"></th>
+                <th scope="col">#</th>
+                <th scope="col">Category</th>
+                <th scope="col">Amount</th>
+                <th scope="col">Date</th>
+                <th scope="col">Description</th>
+            </thead>
+            <tbody>
+                {% for transaction in transactions %}
+                <tr>
+                    <th scope="row">
+                        <input type="checkbox" name="transaction_ids" value="{{ transaction.id }}">
+                    </th>
+                    <th scope="row"> {{ forloop.counter }}</th>
+                    <td>{{ transaction.category }}</td>
+                    <td>{{ transaction.amount }}</td>
+                    <td>{{ transaction.created_on }}</td>
+                    <td>{{ transaction.description }}</td>
+                    
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addTransactionModalLabel">
+            Add Transaction
+        </button>
+        <button type="submit" class="btn btn-danger ms-2" name = "delete_transactions"> Delete marked transactions</button>
+    </form>
 </div>
 
 <!-- Modal for adding transaction -->
@@ -54,7 +61,7 @@
                 <form method="post" action="{% url 'plan_detail' slug=plan.slug %}">
                     {% csrf_token %}
                     {{ form.as_p }}
-                    <button type="submit" class="btn btn-primary">Add Transaction</button>
+                    <button type="submit" class="btn btn-primary" name="delete_transactions">Add Transaction</button>
                 </form>
             </div>
         </div>

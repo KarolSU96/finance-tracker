@@ -50,6 +50,15 @@ class PlanDetail(View):
                 transaction.save()
                 return redirect('plan_detail', slug=slug)
 
+            # Check if delete button is clicked
+            if 'delete_transactions' in request.POST:
+                transaction_ids = request.POST.getlist('transaction_ids')
+
+                if transaction_ids:
+                    Transaction.objects.filter(id__in=transaction_ids).delete()
+
+                return redirect('plan_detail', slug=slug)
+
             context = {
                 'plan': plan,
                 'transactions': transactions,
@@ -60,3 +69,5 @@ class PlanDetail(View):
 
 class Register(View):
     template_name = 'register.html'
+
+
