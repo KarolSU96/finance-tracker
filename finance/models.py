@@ -50,7 +50,7 @@ class Transaction(models.Model):
         return f"{self.plan.user.username} - {self.plan.name} - {self.category.name} - €{self.amount} - {self.date.strftime('%Y-%m-%d')} "
     
     # Update total_spent in Plan model when saving a new transaction
-    def save_amount(self):
+    def save_amount(self, *args, **kwargs):
         self.plan.total_spent += self.amount
         self.plan.save()
 
