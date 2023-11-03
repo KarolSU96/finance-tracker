@@ -3,28 +3,28 @@
 
 {% block content %}
 {% if user.is_authenticated %}
-<table class="table">
-    <thead>
-        <th scope="col">#</th>
-        <th scope="col">Name</th>
-        <th scope="col">Budget</th>
-        <th scope="col">Description</th>
-        <th scope="col">Created on</th>
-    </thead>
-    <tbody>
-    {% for plan in plan_list %}
-    <tr>
-        <th scope="row"> {{ forloop.counter }}</th>
-        <td><a href="{% url 'plan_detail' slug=plan.slug %}">{{ plan.name }}</a></td>
-        <td>{{ plan.budget }}</td>
-        <td>{{ plan.description }}</td>
-        <td>{{ plan.created_on }}</td>
-    </tr>
-    {% endfor %}
-    </tbody>
-</table>
-
-</ul>
+<form action="post">
+    <table class="table">
+        <thead>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Budget</th>
+            <th scope="col">Description</th>
+            <th scope="col">Created on</th>
+        </thead>
+        <tbody>
+        {% for plan in plan_list %}
+        <tr>
+            <th scope="row"> {{ forloop.counter }}</th>
+            <td><a href="{% url 'plan_detail' slug=plan.slug %}">{{ plan.name }}</a></td>
+            <td>{{ plan.budget }}</td>
+            <td>{{ plan.description }}</td>
+            <td>{{ plan.created_on }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</form>
 
 
 {% else %}

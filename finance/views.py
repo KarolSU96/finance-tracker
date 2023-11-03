@@ -67,5 +67,8 @@ class PlanDetail(View):
 
             return render(request, self.template_name, context)
 
-class Register(View):
-    template_name = 'register.html'
+class AddPlan(View):
+    template_name = 'add_plan.html'
+
+    def get(self, request, *args, **kwargs):
+        return render(request, self.template_name, {})
