@@ -15,7 +15,9 @@ class PlanList(generic.ListView):
 
 class PlanDetail(View):
     template_name = 'plan_details.html'
-
+    
+    # Handles GET requests for displaying plan details, transactions, and
+    # transaction form. Renders the plan details template with relevant context.
     def get(self, request, slug, *args, ** kwargs):
         queryset = Plan.objects.all()
         plan = get_object_or_404(queryset, slug=slug)
@@ -31,6 +33,9 @@ class PlanDetail(View):
 
         return render(request, self.template_name, context)
     
+    # Handles the POST requests for ading a new transaction to the plan. 
+    # If form is valid, add a new transaction. To the plan and redirects To
+    # plan_details.
     def post(self, request, slug, *args, **kwargs):
             queryset = Plan.objects.all()
             plan = get_object_or_404(queryset, slug=slug)
