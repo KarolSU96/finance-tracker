@@ -11,6 +11,7 @@ class PlanList(generic.ListView):
     template_name ='home.html'
     paginate_by = 22
 
+    # Handles POST requests for deleting the plans.
     def post(self, request, *args, **kwargs):
         
         if 'delete_plans' in request.POST:
