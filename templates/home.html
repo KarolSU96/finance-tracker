@@ -3,9 +3,11 @@
 
 {% block content %}
 {% if user.is_authenticated %}
-<form action="post">
+<form method="post" action="{% url 'home' %}">
+    {% csrf_token %}
     <table class="table">
         <thead>
+            <th scope="col"></th>
             <th scope="col">#</th>
             <th scope="col">Name</th>
             <th scope="col">Budget</th>
@@ -15,6 +17,9 @@
         <tbody>
         {% for plan in plan_list %}
         <tr>
+            <th scope="row">
+                <input type="checkbox" name="plans_ids" value="{{ plan.id }}">
+            </th>
             <th scope="row"> {{ forloop.counter }}</th>
             <td><a href="{% url 'plan_detail' slug=plan.slug %}">{{ plan.name }}</a></td>
             <td>{{ plan.budget }}</td>
@@ -24,6 +29,7 @@
         {% endfor %}
         </tbody>
     </table>
+    <button type="submit" class="btn btn-danger ms-2" name="delete_plans">Delete Selected Plans</button>
 </form>
 
 

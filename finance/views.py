@@ -11,6 +11,17 @@ class PlanList(generic.ListView):
     template_name ='home.html'
     paginate_by = 22
 
+    def post(self, request, *args, **kwargs):
+        
+        if 'delete_plans' in request.POST:
+            plans_ids = request.POST.getlist('plans_ids')
+            
+            if plans_ids:
+                Plan.objects.filter(id__in=plans_ids).delete()
+            
+            return redirect('home')
+
+
     def get_queryset(self):
         return Plan.objects.all()
 
@@ -100,3 +111,4 @@ class AddPlan(LoginRequiredMixin,View):
             return redirect('plan_detail', slug=plan.slug)
         else:
             return render(request,self.template_name, {'form':form})
+        
