@@ -47,6 +47,11 @@ class PlanDetail(View):
 
             if form.is_valid():
                 transaction = form.save(commit=False)
+
+                if transaction.amount > plan.remaining:
+                    form.add_error('amount','Transaction amount exceeds the plan budget.')
+                    return render(request, self.template_name, {'plan': plan, 'transactions': transactions,'form': form })
+
                 transaction.plan = plan
                 transaction.save()
                 return redirect('plan_detail', slug=slug)
@@ -68,13 +73,18 @@ class PlanDetail(View):
 
             return render(request, self.template_name, context)
 
+
 class AddPlan(LoginRequiredMixin,View):
     template_name = 'add_plan.html'
 
+    # Renders the form for adding a new plan 
     def get(self, request, *args, **kwargs):
         form = PlanForm()
         return render(request, self.template_name, {'form':form})
 
+    # Handles the submission of the form. If the form is valid,
+    # creates a new plan associated with the current user and redirects to the
+    # page of the created plan.
     def post(self, request, *args, **kwargs):
         
         form = PlanForm(request.POST)
