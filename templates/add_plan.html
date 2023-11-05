@@ -5,8 +5,10 @@
 <div class="container mt-5" >
     <div class="col-md-auto" >
         <h2>Add a new plan. Please fill out the details.</h2>
-        <form action="post" action="#">
-            <label for="planName">Plan Name:</label>
+        <form method="post" action="{% url 'add_plan' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
 </div>

@@ -1,7 +1,8 @@
 from django.shortcuts import render, HttpResponse, get_object_or_404, redirect
 from django.views import generic, View
 from .models import Plan, Transaction
-from .forms import TransactionForm
+from .forms import TransactionForm, PlanForm
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 class PlanList(generic.ListView):
@@ -67,8 +68,25 @@ class PlanDetail(View):
 
             return render(request, self.template_name, context)
 
-class AddPlan(View):
+class AddPlan(LoginRequiredMixin,View):
     template_name = 'add_plan.html'
 
     def get(self, request, *args, **kwargs):
-        return render(request, self.template_name, {})
+        form = PlanForm()
+        return render(request, self.template_name, {'form':form})
+
+    def post(self, request, *args, **kwargs):
+        
+        form = PlanForm(request.POST)
+
+        if form.is_valid():
+            plan = form.save(commit=False)
+            plan.user = request.user
+
+            if not plan.slug:
+                plan.slug = plan.name.lower().replace(" ", "-")
+
+            plan.save()
+            return redirect('plan_detail', slug=plan.slug)
+        else:
+            return render(request,self.template_name, {'form':form})

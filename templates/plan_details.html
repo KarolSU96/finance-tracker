@@ -61,7 +61,7 @@
                 <form method="post" action="{% url 'plan_detail' slug=plan.slug %}">
                     {% csrf_token %}
                     {{ form.as_p }}
-                    <button type="submit" class="btn btn-primary" name="delete_transactions">Add Transaction</button>
+                    <button type="submit" class="btn btn-primary" name="add_transactions">Add Transaction</button>
                 </form>
             </div>
         </div>
