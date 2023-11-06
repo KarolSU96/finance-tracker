@@ -1,7 +1,7 @@
 from django.shortcuts import render, HttpResponse, get_object_or_404, redirect
 from django.views import generic, View
 from .models import Plan, Transaction
-from .forms import TransactionForm, PlanForm
+from .forms import TransactionForm, PlanForm, EditTransactionForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 
@@ -129,7 +129,7 @@ class EditTransaction(LoginRequiredMixin, View):
 
     def post(self, request, slug, trasacton_id, *args, **kwargs):
         Transaction = get_object_or_404(Transaction, id=transaction_id)
-        form = EditTransactionForm(request.POST, instance=transactino)
+        form = EditTransactionForm(request.POST, instance=transaction)
 
         if form.is_valid():
             form.save()
