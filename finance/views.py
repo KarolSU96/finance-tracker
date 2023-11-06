@@ -113,3 +113,32 @@ class AddPlan(LoginRequiredMixin,View):
         else:
             return render(request,self.template_name, {'form':form})
         
+
+class EditTransaction(LoginRequiredMixin, View):
+    template_name = 'edit_transaction.html'
+
+    def get(self, request, slug, transactinon_id, *args, **kwargs):
+        Transaction = get_object_or_404(Transaction, id=transactinon_id)
+        form = EditTransactionForm(instance=transaction)
+
+        context={
+            'form':form,
+            'plan_slug': slug,
+            'transaction_id': transaction_id,
+        }
+
+    def post(self, request, slug, trasacton_id, *args, **kwargs):
+        Transaction = get_object_or_404(Transaction, id=transaction_id)
+        form = EditTransactionForm(request.POST, instance=transactino)
+
+        if form.is_valid():
+            form.save()
+            return redirect('plan_detail', slug=slug)
+
+            context = {
+                'form':form,
+                'plan_slug':slug,
+                'transaction_id': transaction_id,
+            }
+
+            return render(request, self.template_name, context)
