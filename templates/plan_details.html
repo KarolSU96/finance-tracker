@@ -21,6 +21,7 @@
             <thead>
                 <th scope="col"></th>
                 <th scope="col">#</th>
+                <th scope="col"></th>
                 <th scope="col">Category</th>
                 <th scope="col">Amount</th>
                 <th scope="col">Date</th>
@@ -33,11 +34,11 @@
                         <input type="checkbox" name="transaction_ids" value="{{ transaction.id }}">
                     </th>
                     <th scope="row"> {{ forloop.counter }}</th>
+                    <th scope="row"> <button type="button" class="btn btn-success">Edit</button></th>
                     <td>{{ transaction.category }}</td>
                     <td>{{ transaction.amount }}</td>
                     <td>{{ transaction.created_on }}</td>
                     <td>{{ transaction.description }}</td>
-                    
                 </tr>
                 {% endfor %}
             </tbody>
