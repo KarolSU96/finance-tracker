@@ -2,7 +2,7 @@
 
 {% block content %}
 <h2>Edit Transaction</h2>
-<form method="post" action="{% url 'edit_transaction' slug=plan_slug transaction_id=transaction_id %}">
+<form method="post" action="{% url 'edit_transaction' slug=plan.slug transaction_id=transaction.id %}">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Save Changes</button>

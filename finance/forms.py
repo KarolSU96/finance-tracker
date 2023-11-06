@@ -16,5 +16,5 @@ class PlanForm(forms.ModelForm):
 class EditTransactionForm(forms.ModelForm):
     class Meta:
         model = Transaction
-        fields = ['category','amount', 'description']
+        fields = ['category','amount','description']
 

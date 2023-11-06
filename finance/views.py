@@ -3,6 +3,7 @@ from django.views import generic, View
 from .models import Plan, Transaction
 from .forms import TransactionForm, PlanForm, EditTransactionForm
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.urls import reverse
 
 
 class PlanList(generic.ListView):
@@ -111,34 +112,38 @@ class AddPlan(LoginRequiredMixin,View):
             plan.save()
             return redirect('plan_detail', slug=plan.slug)
         else:
-            return render(request,self.template_name, {'form':form})
+            return render(request, self.template_name, {'form':form})
         
 
 class EditTransaction(LoginRequiredMixin, View):
     template_name = 'edit_transaction.html'
 
-    def get(self, request, slug, transactinon_id, *args, **kwargs):
-        Transaction = get_object_or_404(Transaction, id=transactinon_id)
+    def get(self, request, slug, transaction_id, *args, **kwargs):
+        transaction = get_object_or_404(Transaction, id=transaction_id)
         form = EditTransactionForm(instance=transaction)
+        plan = transaction.plan
 
-        context={
-            'form':form,
-            'plan_slug': slug,
-            'transaction_id': transaction_id,
+        context = {
+            'form': form,
+            'transaction': transaction,
+            'plan': plan,
         }
 
-    def post(self, request, slug, trasacton_id, *args, **kwargs):
-        Transaction = get_object_or_404(Transaction, id=transaction_id)
+        return render(request, self.template_name, context)
+
+    def post(self, request, slug, transaction_id, *args, **kwargs):
+        transaction = get_object_or_404(Transaction, id=transaction_id)
         form = EditTransactionForm(request.POST, instance=transaction)
 
         if form.is_valid():
             form.save()
             return redirect('plan_detail', slug=slug)
 
-            context = {
-                'form':form,
-                'plan_slug':slug,
-                'transaction_id': transaction_id,
-            }
+        context = {
+            'form': form,
+            'slug': slug,
+            'transaction_id': transaction_id,        
+        }
 
-            return render(request, self.template_name, context)
+        return render(request, self.template_name, context)
+            
