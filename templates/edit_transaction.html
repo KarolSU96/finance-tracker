@@ -1,5 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-{% endblock%}
+<h2>Edit Transaction</h2>
+<form method="post" action="{% url 'plan_details' slug=plan.slug %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save Changes</button>
+</form>
+<a href="{% url 'plan_detail' slug=transaction.plan.slug %}">Cancel</a>
+{% endblock %}
