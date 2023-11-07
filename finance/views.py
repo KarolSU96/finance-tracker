@@ -4,6 +4,7 @@ from .models import Plan, Transaction
 from .forms import TransactionForm, PlanForm, EditTransactionForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse
+from django.contrib import messages 
 
 
 class PlanList(generic.ListView):
@@ -110,6 +111,7 @@ class AddPlan(LoginRequiredMixin,View):
                 plan.slug = plan.name.lower().replace(" ", "-")
 
             plan.save()
+            
             return redirect('plan_detail', slug=plan.slug)
         else:
             return render(request, self.template_name, {'form':form})
