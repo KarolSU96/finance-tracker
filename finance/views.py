@@ -117,11 +117,13 @@ class AddPlan(LoginRequiredMixin,View):
 
 class EditTransaction(LoginRequiredMixin, View):
     template_name = 'edit_transaction.html'
-
+    # Retrieves the transaction and associated plan for editing.
+    # Renders the form for editing the transaction.
     def get(self, request, slug, transaction_id, *args, **kwargs):
         transaction = get_object_or_404(Transaction, id=transaction_id)
         form = EditTransactionForm(instance=transaction)
         plan = transaction.plan
+        plan.remaining = plan.budget - plan.total_spent
 
         context = {
             'form': form,
@@ -130,19 +132,36 @@ class EditTransaction(LoginRequiredMixin, View):
         }
 
         return render(request, self.template_name, context)
-
+    # Creates a form instance with the submitted data and the transaction.
+    # If the form if valid, saves the changes and redirects to plan_detail.
+    # If the amount is bigger than the remaining money in the plan, displays
+    # an error message.
     def post(self, request, slug, transaction_id, *args, **kwargs):
         transaction = get_object_or_404(Transaction, id=transaction_id)
         form = EditTransactionForm(request.POST, instance=transaction)
+        plan = transaction.plan
+        plan_remaining_money = plan.budget - plan.total_spent
 
         if form.is_valid():
-            form.save()
+            new_amount = form.cleaned_data['amount']
+
+            if new_amount > plan_remaining_money:
+                form.add_error('amount','Transaction amount exceeds the plan budget.')
+                context = {
+                    'form': form,
+                    'slug': slug,
+                    'transaction': transaction,
+                    'plan': plan,
+                }
+                return render(request, self.template_name, context)
+
+            form.save()        
             return redirect('plan_detail', slug=slug)
 
         context = {
             'form': form,
             'slug': slug,
-            'transaction_id': transaction_id,        
+            'transaction_id': transaction_id,
         }
 
         return render(request, self.template_name, context)
