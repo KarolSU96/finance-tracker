@@ -21,7 +21,8 @@ class PlanList(generic.ListView):
             
             if plans_ids:
                 Plan.objects.filter(id__in=plans_ids).delete()
-            
+
+            messages.success(request, 'Plan(s) deleted successfully! ')
             return redirect('home')
 
 
@@ -68,6 +69,7 @@ class PlanDetail(View):
 
                 transaction.plan = plan
                 transaction.save()
+                messages.success(request, 'Transaction added successfully!')
                 return redirect('plan_detail', slug=slug)
 
             # Check if delete button is clicked, if it is, delete marked transactions
@@ -76,7 +78,7 @@ class PlanDetail(View):
 
                 if transaction_ids:
                     Transaction.objects.filter(id__in=transaction_ids).delete()
-
+                messages.success(request, 'Transaction(s) deleted succesfully!')
                 return redirect('plan_detail', slug=slug)
 
             context = {
@@ -111,7 +113,7 @@ class AddPlan(LoginRequiredMixin,View):
                 plan.slug = plan.name.lower().replace(" ", "-")
 
             plan.save()
-            
+            messages.success(request, 'Plan added successfully')
             return redirect('plan_detail', slug=plan.slug)
         else:
             return render(request, self.template_name, {'form':form})
@@ -134,6 +136,7 @@ class EditTransaction(LoginRequiredMixin, View):
         }
 
         return render(request, self.template_name, context)
+
     # Creates a form instance with the submitted data and the transaction.
     # If the form if valid, saves the changes and redirects to plan_detail.
     # If the amount is bigger than the remaining money in the plan, displays
@@ -157,7 +160,8 @@ class EditTransaction(LoginRequiredMixin, View):
                 }
                 return render(request, self.template_name, context)
 
-            form.save()        
+            form.save()
+            messages.success(request, 'Transaction edited successfully!')        
             return redirect('plan_detail', slug=slug)
 
         context = {
