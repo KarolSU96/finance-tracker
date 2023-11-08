@@ -1,7 +1,7 @@
 // Function waits for DOM to be fully loaded before execution
 document.addEventListener('DOMContentLoaded', function() {
     // get element containing messages
-    const messages = document.querySelector('.messages')
+    const messages = document.querySelector('.messages');
 
     // check if messages exist
     if (messages) {
@@ -15,4 +15,4 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     }
-})
+});
