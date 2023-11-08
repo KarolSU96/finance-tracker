@@ -3,7 +3,7 @@
 
 {% block content %}
 {% if user.is_authenticated %}
-<form method="post" action="{% url 'home' %}">
+<form method="post" action="{% url 'home' %}" class="mb-5">
     {% csrf_token %}
     <table class="table">
         <thead>
