@@ -1,39 +1,74 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Django Finance Tracker
 
-Welcome,
+This is my milestone 4 project of the Code Institute Full Stack Web Development Course.
+The goal of the project is to build a Full-Stack Web application using an MVC (Model-Template-View) framework.
+Finance Tracker is a web applicaton for managing your financial expenses which utilises Django as a framework.
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+This tracker should provide everyone with a simple tool to plan their monthly budget or maybe a even their next vacation.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
 
-## Codeanywhere Reminders
+## UX 
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
 
-`python3 -m http.server`
+### Design
+This web app is responsive and work well on both desktop and mobile devices.
+I focussed on simplicity and clearity of the page. Just the key features available.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+### Colour Scheme
+Blue white black // notes needed 
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
 
-`http_server`
+### Typography
+The font used throughout the application is Lato, which means summer in polish.
+It's a sans serif typeface, designed in Summer 2010 by Lukas Dziedzic.
+It has a fresh, aesthetic and is highly readable.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+-[Lato](https://fonts.google.com/specimen/Lato?preview.text=Finance%20Tracker)
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+### User Stories
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+"As a user, I would like to_** __________"
 
-To log into the Heroku toolbelt CLI:
+- sdssd
+- asdasd
+- asdas
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
 
----
+### Registered Users
+- As a registered user, I would like to
+- As a registered user, I would like to
+- As a registered user, I would like to
+- 
 
-Happy coding!
+
+### Site Admin
+- Access and analyze overall application data.
+
+
+
+## Wireframes
+
+
+
+
+## Features
+
+
+
+
+### Future Fratures
+
+
+## Technologies Used
+- Django: Web framework for Pyhton.
+- Bootstrap: Front-end framework.
+- SweetAlert: Customizable alerts for better user experience.
+  
+
+## Testing
+
+
+## Deployment
+
+## Credits
