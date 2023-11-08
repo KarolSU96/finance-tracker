@@ -5,6 +5,8 @@ from .forms import TransactionForm, PlanForm, EditTransactionForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib import messages
 
+# pylint: disable=no-member
+
 
 class PlanList(generic.ListView):
     """View for listing plans."""
@@ -72,8 +74,15 @@ class PlanDetail(View):
             if transaction.amount > plan.remaining:
                 form.add_error(
                     'amount', 'Transaction amount exceeds the plan budget.')
-                return render(request, self.template_name, {'plan': plan,
-                'transactions': transactions, 'form': form})
+                return render(
+                    request,
+                    self.template_name,
+                    {
+                        'plan': plan,
+                        'transactions': transactions,
+                        'form': form
+                    }
+                )
 
             transaction.plan = plan
             transaction.save()
