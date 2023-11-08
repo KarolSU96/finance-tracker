@@ -15,7 +15,7 @@
     {% if messages %}
     <div class="messages d-none">
         {% for message in messages %}
-        <div class="{{ message.tags }}" id="">{{ message }}</div>
+        <div class="{{ message.tags }}" >{{ message }}</div>
         {% endfor %}
     </div>
     {% endif %}
@@ -45,9 +45,8 @@
                     </li>
                 {% endif %}
                 </ul>
-            </div>
+            </nav>
         </div>
-        </nav>
         </header>
     <section class="min-vh-100 pb-5">
       {% block content %}
