@@ -102,9 +102,50 @@ How great would it be to not be restrictedby time? Unfortunatley for us, 3 dimen
 
 ## Testing
 
+### HTML
+
+I used the recommended [HTML W3C Validator](https://validator.w3.org) to validate my HTML files.
+
+| Page | Screenshot | Passed / Notes |
+| --- | --- | --- |
+Homepage - home.html | link to img here | No errors.
+
+| Page | Screenshot | Passed / Notes |
+| --- | --- | --- |
+Homepage - home.html | link to img here | No errors.
+
+| Page | Screenshot | Passed / Notes |
+| --- | --- | --- |
+Homepage - home.html | link to img here | No errors.
+
+| Page | Screenshot | Passed / Notes |
+| --- | --- | --- |
+Homepage - home.html | link to img here | No errors.
+
+### CSS
+
+I used the recommended [Jigsaw Validator](https://jigsaw.w3.org/css-validator) to validate my CSS file.
+
+### JavaScricpt
+
+I used the recommeded [JShint Vadalidator](https://jshint.com) to validate my JS file.
+
+### Python
+
+I used the recommended [PEP8 Python Validator](https://pep8ci.herokuapp.com) to validate my Python Files.
+
+
+### Lighthouse Testing
+
 
 ## Deployment
-- The wenste
+  1. Clone the Repository
+  2. Navigate to Project Directory
+  3. Intall Dependencies
+  4. Configure Enviromental Variables
+  5. Apply Database Migrations
+  6. Run Development Server
+  7. Access the Application
 
 ## Credits
 - This web app uses Code Institute Full Template.
