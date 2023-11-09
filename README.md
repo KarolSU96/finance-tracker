@@ -102,6 +102,8 @@ How great would it be to not be restrictedby time? Unfortunatley for us, 3 dimen
 
 ## Testing
 
+I planned and performed various tests to fix bugs and validated the HTML, CSS, JavaScript and Python code. Results can be seen below.
+
 ### HTML
 
 I used the recommended [HTML W3C Validator](https://validator.w3.org) to validate my HTML files.
