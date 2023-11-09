@@ -127,10 +127,15 @@ Edit Transaction Page - edit_transaction.html | ![Edit Transaction Page](./docum
 ### CSS
 
 I used the recommended [Jigsaw Validator](https://jigsaw.w3.org/css-validator) to validate my CSS file.
+![Jigsaw Validator](./documentation/jigsaw.png)
+No errors. 216 warrnings that target bootstrap classes.
 
 ### JavaScricpt
 
 I used the recommeded [JShint Vadalidator](https://jshint.com) to validate my JS file.
+Two warnings about ES6, which can be ignored.
+Swal is a SweetAlert variable.
+
 
 ### Python
 
