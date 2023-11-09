@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-karolsu96-finance-tracke-jxuj07couj.us2.codeanyapp.com',
+ALLOWED_HOSTS = ['8000-karolsu96-finance-tracke-g2lglw5lvl.us2.codeanyapp.com',
                  'localhost', 'financial-plannero-4a862bf56c00.herokuapp.com']
 
 
