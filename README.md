@@ -42,7 +42,7 @@ It has a fresh, aesthetic and is highly readable.
 
 ### Site Admin
 
-"as a site administrator, I can :________"
+"As a site administrator, I can :________"
 - Access and analyze overall application data to monitor user activity, identify trends and encure the platform's optimal performance.
 - Manage the categories by adding and deleting them to mantain a relevant and organized classification system for user transactions.
 
@@ -58,7 +58,7 @@ It has a fresh, aesthetic and is highly readable.
 - Encures user data privacy and protection.
 
 2. Plan Management:
-- Crete and delete financial plans efortlessly.
+- Create and delete financial plans efortlessly.
 - Quick overview for existing plans.
 
 3. Transaction Management:
