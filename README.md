@@ -110,7 +110,7 @@ I used the recommended [HTML W3C Validator](https://validator.w3.org) to validat
 
 | Page | Screenshot | Passed / Notes |
 | --- | --- | --- |
-Homepage - home.html | link to img here | No errors.
+![Home Page](./documentation/home.png) | No errors. | No errors.
 
 | Page | Screenshot | Passed / Notes |
 | --- | --- | --- |
