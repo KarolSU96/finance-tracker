@@ -13,7 +13,7 @@ class PlanList(generic.ListView):
 
     model = Plan
     queryset = Plan.objects
-    template_name = 'home.html'
+    template_name = 'index.html'
     paginate_by = 22
 
     """ Handles POST requests for deleting the plans."""
