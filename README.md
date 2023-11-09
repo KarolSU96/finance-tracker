@@ -140,7 +140,7 @@ Swal is a SweetAlert variable.
 ### Python
 
 I used the recommended [PEP8 Python Validator](https://pep8ci.herokuapp.com) to validate my Python Files.
-
+All of the python fiels has been tested in PEP8 CI Python Linter. No Errors found except for the settings.py where there is a problem with too long line which I couldn't fix because If I split the line then the Validator says that the seond line is eiter over or underindented.
 
 ### Lighthouse Testing
 
