@@ -1,4 +1,5 @@
 # Django Finance Tracker
+![Plan List Page](./documentation/readme-head)
 
 This is my milestone 4 project of the Code Institute Full Stack Web Development Course.
 The goal of the project is to build a Full-Stack Web application using an MVC (Model-Template-View) framework.
@@ -96,7 +97,7 @@ It has a fresh, aesthetic and is highly readable.
 ## Bugs and Errors
 
 How great would it be to not be restrictedby time? Unfortunatley for us, 3 dimensional beings, the time flows and I didn't have enough of it to fix all the bugs. So here they are:
-- SweetAlerts notifications taking a bit too much space on mobile. I tired numerous ways to style it differently but nothing has worked yet. In the docs it says that the width should be editable when we fire the swal as one of the properties of the object. Will defenitely fix this in the future when I have time.
+- SweetAlerts notifications sometimes are taking a bit too much space on mobile. I tired numerous ways to style it differently but nothing has worked yet. In the docs it says that the width should be editable when we fire the swal as one of the properties of the object. Will defenitely fix this in the future when I have time.
 - Plan table is a bit too big on some mobile devices. It still displays the informations nicely but sometimes the nuser needs to scroll a bit to the right, to see the plan description for example.
 
 But there are the good news. The bugs that I encountered and fixed are:
