@@ -175,6 +175,58 @@ Desktop:
 Mobile:
 ![Edit Transaction Page](./documentation/lighthouse-edit-transaction-mobile.png)
 
+### Manual Tests
+To ensure the functionality, usability, responsiveness and data management within the web applicaton, I carried out various manual tests which will are described below.
+
+* **Functionality Tests**
+
+    * **User Authentication**
+
+        * Test Case 1: User Registration:
+            1. Navigate to registation page.
+            2. Fill in the required fields (I disabled email verification as it's just a school project)
+            3. Submit the registation form.
+            - **Expected Result**: The user is successfully registered and can log in.
+    
+        * Test Case 2: User Login and Logout:
+            1. Navigate to the login page.
+            2. Enter valid credentials.
+            3. Submit the login form.
+            4. Log out.
+            - **Expected Restult**: The user can log in and log out successfully.
+
+* **Usability Tests**
+
+    * **User Interace**
+
+        * Test Case 1: Navigation:
+            1. Navigate to different pages.
+            2. Click on various buttons.
+            - **Expected Result**: All navigaton elements work as expected.
+
+        * Test Case 2 : Notifications:
+            1. Log in, out, add transaction, change data.
+            - ** Expected Result**: User should be notified about changes to tha data.
+    * **Responsiveness Tests**
+    
+        * Test Case: Mobile Responsiveness:
+            1. Open the application on various mobile devices.
+            2. Test different functionalities on mobile.
+            - **Expected Result**: Respondive deisgn on different devices.
+    
+    
+    * ** Data Management Tests**:
+
+        * Test Case: Budget Calculations:
+            1. Create a plan with a specific budget.
+            2. Add transactions and check budget calculations.
+            - **Expected Result**: Accurate budget calculations based on transactions. If the transaction exceeds the budget, user is notified with a pop up alert. 
+
+
+
+
+
+
 ## Deployment
   1. Clone the Repository
   2. Navigate to Project Directory
