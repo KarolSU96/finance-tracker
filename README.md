@@ -55,10 +55,10 @@ It has a fresh, aesthetic and is highly readable.
 ![Mockup Add Plan](./documentation/mockup-add-plan.png)
 
 - Plan Details
-![Mockup Plan Details](./documentation/plan-details.png)
+![Mockup Plan Details](./documentation/mockup-plan-details.png)
 
 -Edit Transaction
-![Mockup Edit Transaction](./documentation/edit-transaction.png)
+![Mockup Edit Transaction](./documentation/mockup-edit-transaction.png)
 
 
 
