@@ -111,16 +111,10 @@ I used the recommended [HTML W3C Validator](https://validator.w3.org) to validat
 | Page | Screenshot | Passed / Notes |
 | --- | --- | --- |
 Homepage - index.html | ![Home Page](./documentation/home.png) | No warnings.
-
-
 | --- | --- | --- |
 Add Plan - add_plan.html | ![Add Plan Page](./documentation/add-plan.png) | There is a bug which shows that there is a h1 element in the line 40- couldn't find anything like this in my code.
-
-
 | --- | --- | --- |
 Plan details - plan_details.html | ![Plan Details Page](./documentation/plan-details.png) | 1 warning, possibly a bug, because I am aria-labeling the modal that has an attribute of aria-hidden.
-
-
 | --- | --- | --- |
 Edit Transaction Page - edit_transaction.html | ![Edit Transaction Page](./documentation/edit-transaction.png)| There is a bug which shows that there is a h1 element in the line 40- couldn't find anything like this in my code.
 
@@ -133,6 +127,7 @@ No errors. 216 warrnings that target bootstrap classes.
 ### JavaScricpt
 
 I used the recommeded [JShint Vadalidator](https://jshint.com) to validate my JS file.
+![JShint Validator](./documentation/jshint.png)
 Two warnings about ES6, which can be ignored.
 Swal is a SweetAlert variable.
 
@@ -140,6 +135,7 @@ Swal is a SweetAlert variable.
 ### Python
 
 I used the recommended [PEP8 Python Validator](https://pep8ci.herokuapp.com) to validate my Python Files.
+![PEP8 Validator](./documentation/pep8)
 All of the python fiels has been tested in PEP8 CI Python Linter. No Errors found except for the settings.py where there is a problem with too long line which I couldn't fix because If I split the line then the Validator says that the seond line is eiter over or underindented.
 
 ### Lighthouse Testing
