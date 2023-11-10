@@ -48,7 +48,17 @@ It has a fresh, aesthetic and is highly readable.
 
 
 ## Wireframes
+- Index:
+![Mockup Index](./documentation/mockup-index.png)
 
+- Add Plan:
+![Mockup Add Plan](./documentation/mockup-add-plan.png)
+
+- Plan Details
+![Mockup Plan Details](./documentation/plan-details.png)
+
+-Edit Transaction
+![Mockup Edit Transaction](./documentation/edit-transaction.png)
 
 
 
@@ -109,7 +119,7 @@ I planned and performed various tests to fix bugs and validated the HTML, CSS, J
 I used the recommended [HTML W3C Validator](https://validator.w3.org) to validate my HTML files.
 
 | Page | Screnshoot | Passed / Notes |
-
+| --- | --- | --- |
 Homepage - index.html - | ![Home Page](./documentation/home.png) | No warnings.|
 Add Plan - add_plan.html | ![Add Plan Page](./documentation/add-plan.png) | There is a bug which shows that there is a h1 element in the line 40- couldn't find anything like this in my code. |
 Plan details - plan_details.html | ![Plan Details Page](./documentation/plan-details.png) | 1 warning, possibly a bug, because I am aria-labeling the modal that has an attribute of aria-hidden. |
