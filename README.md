@@ -108,14 +108,10 @@ I planned and performed various tests to fix bugs and validated the HTML, CSS, J
 
 I used the recommended [HTML W3C Validator](https://validator.w3.org) to validate my HTML files.
 
-| Page | Screenshot | Passed / Notes |
-| --- | --- | --- |
+| Page | Screnshoot | Passed / Notes |
 Homepage - index.html | ![Home Page](./documentation/home.png) | No warnings.
-| --- | --- | --- |
 Add Plan - add_plan.html | ![Add Plan Page](./documentation/add-plan.png) | There is a bug which shows that there is a h1 element in the line 40- couldn't find anything like this in my code.
-| --- | --- | --- |
 Plan details - plan_details.html | ![Plan Details Page](./documentation/plan-details.png) | 1 warning, possibly a bug, because I am aria-labeling the modal that has an attribute of aria-hidden.
-| --- | --- | --- |
 Edit Transaction Page - edit_transaction.html | ![Edit Transaction Page](./documentation/edit-transaction.png)| There is a bug which shows that there is a h1 element in the line 40- couldn't find anything like this in my code.
 
 ### CSS
@@ -139,7 +135,15 @@ I used the recommended [PEP8 Python Validator](https://pep8ci.herokuapp.com) to 
 All of the python fiels has been tested in PEP8 CI Python Linter. No Errors found except for the settings.py where there is a problem with too long line which I couldn't fix because If I split the line then the Validator says that the seond line is eiter over or underindented.
 
 ### Lighthouse Testing
-
+| Page | Screnshoot/Score | Desktop / Mobile
+| Homepage | ![Home Page](./documentation/lighthouse-index-desktop.png) | Desktop
+| Homepage | ![Home Page](./documentation/lighthouse-index-mobile.png) | Mobile
+| Add Plan | ![Add Plan Page](./documentation/lighthouse-add-plan-desktop.png) | Desktop
+| Add Plan | ![Add Plan Page](./documentation/lighthouse-add-plan-mobile.png) | Mobile
+| Plan Details | ![Plan Details Page](./documentation/lighthouse-plan-detail-desktop.png) | Desktop
+| Plan Details | ![Plan Details Page](./documentation/lighthouse-plan-detail-mobile.png) | Mobile
+| Edit Transaction | ![Edit Transaction Page](./documentation/lighthouse-edit-transaction-desktop.png) | Desktop
+| Edit Transaction | ![Edit Transaction Page](./documentation/lighthouse-edit-transaction-mobile.png) | Mobile
 
 ## Deployment
   1. Clone the Repository
