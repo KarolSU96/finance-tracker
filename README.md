@@ -118,7 +118,7 @@ I planned and performed various tests to fix bugs and validated the HTML, CSS, J
 
 I used the recommended [HTML W3C Validator](https://validator.w3.org) to validate my HTML files.
 
-| Page | Screnshoot | Passed / Notes |
+| Page | Screenshot | Passed / Notes |
 | --- | --- | --- |
 Homepage - index.html - | ![Home Page](./documentation/home.png) | No warnings.|
 Add Plan - add_plan.html | ![Add Plan Page](./documentation/add-plan.png) | There is a bug which shows that there is a h1 element in the line 40- couldn't find anything like this in my code. |
@@ -146,7 +146,6 @@ I used the recommended [PEP8 Python Validator](https://pep8ci.herokuapp.com) to 
 All of the python fiels has been tested in PEP8 CI Python Linter. No Errors found except for the settings.py where there is a problem with too long line which I couldn't fix because If I split the line then the Validator says that the seond line is eiter over or underindented.
 
 ### Lighthouse Testing
-| Page | Screnshoot/Score | Desktop / Mobile
 
 - Home Page:
 Desktop:
@@ -164,7 +163,7 @@ Mobile:
 
 - Plan Details Page:
 Desktop:
-![Plan Details Page](./documentation/lighthouse-plan-detail-desktop.png)
+![Plan Details Page](./documentation/lighthouse-plan-detail-dekstop.png)
 
 Mobile:
 ![Plan Details Page](./documentation/lighthouse-plan-detail-mobile.png)
