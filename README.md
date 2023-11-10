@@ -109,10 +109,11 @@ I planned and performed various tests to fix bugs and validated the HTML, CSS, J
 I used the recommended [HTML W3C Validator](https://validator.w3.org) to validate my HTML files.
 
 | Page | Screnshoot | Passed / Notes |
-Homepage - index.html | ![Home Page](./documentation/home.png) | No warnings.
-Add Plan - add_plan.html | ![Add Plan Page](./documentation/add-plan.png) | There is a bug which shows that there is a h1 element in the line 40- couldn't find anything like this in my code.
-Plan details - plan_details.html | ![Plan Details Page](./documentation/plan-details.png) | 1 warning, possibly a bug, because I am aria-labeling the modal that has an attribute of aria-hidden.
-Edit Transaction Page - edit_transaction.html | ![Edit Transaction Page](./documentation/edit-transaction.png)| There is a bug which shows that there is a h1 element in the line 40- couldn't find anything like this in my code.
+
+Homepage - index.html - | ![Home Page](./documentation/home.png) | No warnings.|
+Add Plan - add_plan.html | ![Add Plan Page](./documentation/add-plan.png) | There is a bug which shows that there is a h1 element in the line 40- couldn't find anything like this in my code. |
+Plan details - plan_details.html | ![Plan Details Page](./documentation/plan-details.png) | 1 warning, possibly a bug, because I am aria-labeling the modal that has an attribute of aria-hidden. |
+Edit Transaction Page - edit_transaction.html | ![Edit Transaction Page](./documentation/edit-transaction.png)| There is a bug which shows that there is a h1 element in the line 40- couldn't find anything like this in my code. |
 
 ### CSS
 
@@ -140,24 +141,28 @@ All of the python fiels has been tested in PEP8 CI Python Linter. No Errors foun
 - Home Page:
 Desktop:
 ![Home Page](./documentation/lighthouse-index-desktop.png)
+
 Mobile:
 ![Home Page](./documentation/lighthouse-index-mobile.png)
 
 - Add Plan Page:
 Desktop:
 ![Add Plan Page](./documentation/lighthouse-add-plan-desktop.png)
+
 Mobile:
 ![Add Plan Page](./documentation/lighthouse-add-plan-mobile.png)
 
 - Plan Details Page:
 Desktop:
 ![Plan Details Page](./documentation/lighthouse-plan-detail-desktop.png)
+
 Mobile:
 ![Plan Details Page](./documentation/lighthouse-plan-detail-mobile.png)
 
 - Edit Transaction:
 Desktop:
 ![Edit Transaction Page](./documentation/lighthouse-edit-transaction-desktop.png)
+
 Mobile:
 ![Edit Transaction Page](./documentation/lighthouse-edit-transaction-mobile.png)
 
