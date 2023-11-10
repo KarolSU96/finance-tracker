@@ -93,11 +93,20 @@ It has a fresh, aesthetic and is highly readable.
 - Data Visualisation: Diagrams for displaying the patterns in spendings.
 - Enchanced site styling
 
-## Bugs
+## Bugs and Errors
 
 How great would it be to not be restrictedby time? Unfortunatley for us, 3 dimensional beings, the time flows and I didn't have enough of it to fix all the bugs. So here they are:
 - SweetAlerts notifications taking a bit too much space on mobile. I tired numerous ways to style it differently but nothing has worked yet. In the docs it says that the width should be editable when we fire the swal as one of the properties of the object. Will defenitely fix this in the future when I have time.
 - Plan table is a bit too big on some mobile devices. It still displays the informations nicely but sometimes the nuser needs to scroll a bit to the right, to see the plan description for example.
+
+But there are the good news. The bugs that I encountered and fixed are:
+- Footer covering the buttons and website being unresponsive.  Fix: Added the margin bottom bootstarp class for the main sections in the templates.
+- Static files not loading on deployed website. Fix: In settings.py the Installed apps the cloudinary needs to be listed in specific order:
+  'cloudinary_storage',
+  'django.contrib.staticfiles',
+  'cloudinary'
+- Edit Transaction Page NonReverseMatch error. Fix: passing whole transaction object to the context instead of its attributes, accessing the attributes with dot notation in the template.
+- Changes to the template not visible after adding allauth. Fix: Expanding the DIRS part of the TEMPLATES configuration in the settings.py. 
 
 ## Technologies Used
 - HTML 5 for structuring the markup text
@@ -108,6 +117,8 @@ How great would it be to not be restrictedby time? Unfortunatley for us, 3 dimen
 - SweetAlert: Customizable alerts for better user experience
 - Git Hub used for secure online code storage
 - Codeanywhere used as a cloud-based IDE for developlment
+- Heroku for Deployment
+- Cloudinary for handling static files static files
   
 
 ## Testing
@@ -215,6 +226,7 @@ To ensure the functionality, usability, responsiveness and data management withi
   7. Access the Application
 
 ## Credits
-- This web app uses Code Institute Full Template.
+- This web app uses Code Institute Full Template
 - SweetAlert for beautiful alerts
 - Bootstrap team for making my life easier when it comes to styling of my page.
+- Tutors who helped 
