@@ -136,14 +136,30 @@ All of the python fiels has been tested in PEP8 CI Python Linter. No Errors foun
 
 ### Lighthouse Testing
 | Page | Screnshoot/Score | Desktop / Mobile
-| Homepage | ![Home Page](./documentation/lighthouse-index-desktop.png) | Desktop
-| Homepage | ![Home Page](./documentation/lighthouse-index-mobile.png) | Mobile
-| Add Plan | ![Add Plan Page](./documentation/lighthouse-add-plan-desktop.png) | Desktop
-| Add Plan | ![Add Plan Page](./documentation/lighthouse-add-plan-mobile.png) | Mobile
-| Plan Details | ![Plan Details Page](./documentation/lighthouse-plan-detail-desktop.png) | Desktop
-| Plan Details | ![Plan Details Page](./documentation/lighthouse-plan-detail-mobile.png) | Mobile
-| Edit Transaction | ![Edit Transaction Page](./documentation/lighthouse-edit-transaction-desktop.png) | Desktop
-| Edit Transaction | ![Edit Transaction Page](./documentation/lighthouse-edit-transaction-mobile.png) | Mobile
+
+- Home Page:
+Desktop:
+![Home Page](./documentation/lighthouse-index-desktop.png)
+Mobile:
+![Home Page](./documentation/lighthouse-index-mobile.png)
+
+- Add Plan Page:
+Desktop:
+![Add Plan Page](./documentation/lighthouse-add-plan-desktop.png)
+Mobile:
+![Add Plan Page](./documentation/lighthouse-add-plan-mobile.png)
+
+- Plan Details Page:
+Desktop:
+![Plan Details Page](./documentation/lighthouse-plan-detail-desktop.png)
+Mobile:
+![Plan Details Page](./documentation/lighthouse-plan-detail-mobile.png)
+
+- Edit Transaction:
+Desktop:
+![Edit Transaction Page](./documentation/lighthouse-edit-transaction-desktop.png)
+Mobile:
+![Edit Transaction Page](./documentation/lighthouse-edit-transaction-mobile.png)
 
 ## Deployment
   1. Clone the Repository
