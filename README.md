@@ -57,7 +57,7 @@ It has a fresh, aesthetic and is highly readable.
 - Plan Details
 ![Mockup Plan Details](./documentation/mockup-plan-details.png)
 
--Edit Transaction
+- Edit Transaction
 ![Mockup Edit Transaction](./documentation/mockup-edit-transaction.png)
 
 
@@ -146,34 +146,16 @@ I used the recommended [PEP8 Python Validator](https://pep8ci.herokuapp.com) to 
 All of the python fiels has been tested in PEP8 CI Python Linter. No Errors found except for the settings.py where there is a problem with too long line which I couldn't fix because If I split the line then the Validator says that the seond line is eiter over or underindented.
 
 ### Lighthouse Testing
-
-- Home Page:
-Desktop:
-![Home Page](./documentation/lighthouse-index-desktop.png)
-
-Mobile:
-![Home Page](./documentation/lighthouse-index-mobile.png)
-
-- Add Plan Page:
-Desktop:
-![Add Plan Page](./documentation/lighthouse-add-plan-desktop.png)
-
-Mobile:
-![Add Plan Page](./documentation/lighthouse-add-plan-mobile.png)
-
-- Plan Details Page:
-Desktop:
-![Plan Details Page](./documentation/lighthouse-plan-detail-dekstop.png)
-
-Mobile:
-![Plan Details Page](./documentation/lighthouse-plan-detail-mobile.png)
-
-- Edit Transaction:
-Desktop:
-![Edit Transaction Page](./documentation/lighthouse-edit-transaction-desktop.png)
-
-Mobile:
-![Edit Transaction Page](./documentation/lighthouse-edit-transaction-mobile.png)
+| Page | Screenshot | Desktop / Mobile |
+| --- | --- | --- |
+| Home Page | ![Home Page](./documentation/lighthouse-index-desktop.png) | Desktop |
+| Home Page | ![Home Page](./documentation/lighthouse-index-mobile.png) | Mobile |
+| Add Plan Page | ![Add Plan Page](./documentation/lighthouse-add-plan-desktop.png) | Desktop |
+| Add Plan Page | ![Add Plan Page](./documentation/lighthouse-add-plan-mobile.png) | Mobile |
+| Plan Details Page | ![Plan Details Page](./documentation/lighthouse-plan-detail-dekstop.png) | Desktop |
+| Plan Details Page | ![Plan Details Page](./documentation/lighthouse-plan-detail-mobile.png) | Mobile |
+| Edit Transaction Page | ![Edit Transaction Page](./documentation/lighthouse-edit-transaction-desktop.png) | Desktop |
+| Edit Transaction Page | ![Edit Transaction Page](./documentation/lighthouse-edit-transaction-mobile.png) | Mobile |
 
 ### Manual Tests
 To ensure the functionality, usability, responsiveness and data management within the web applicaton, I carried out various manual tests which will are described below.
@@ -221,10 +203,6 @@ To ensure the functionality, usability, responsiveness and data management withi
             1. Create a plan with a specific budget.
             2. Add transactions and check budget calculations.
             - **Expected Result**: Accurate budget calculations based on transactions. If the transaction exceeds the budget, user is notified with a pop up alert. 
-
-
-
-
 
 
 ## Deployment
