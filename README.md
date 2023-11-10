@@ -9,6 +9,9 @@ Finance Tracker is a web applicaton for managing your financial expenses which u
 
 This tracker should provide everyone with a simple tool to plan their monthly budget or maybe a even their next vacation.
 
+Deployed Website Dink: https://financial-plannero-4a862bf56c00.herokuapp.com/
+GitHub Repo: https://github.com/KarolSU96/finance-tracker
+
 
 ## UX 
 
