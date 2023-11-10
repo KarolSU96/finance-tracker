@@ -33,7 +33,7 @@
                 {% for transaction in transactions %}
                 <tr>
                     <th scope="row">
-                        <input type="checkbox" name="transaction_ids" value="{{ transaction.id }}" aria-label="Checkbox For Transaction {{ transaction.id}}>
+                        <input type="checkbox" name="transaction_ids" value="{{ transaction.id }}" aria-label="Checkbox For Transaction {{ transaction.id}}">
                     </th>
                     <th scope="row"> {{ forloop.counter }}</th>
                     <th scope="row"> <a href="{% url 'edit_transaction' slug=plan.slug transaction_id=transaction.id %}" class="btn btn-success">Edit</a></th>
