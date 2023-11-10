@@ -1,5 +1,5 @@
 # Django Finance Tracker
-![Plan List Page](./documentation/readme-head)
+![Plan List Page](./documentation/readme-head.png)
 
 This is my milestone 4 project of the Code Institute Full Stack Web Development Course.
 The goal of the project is to build a Full-Stack Web application using an MVC (Model-Template-View) framework.
