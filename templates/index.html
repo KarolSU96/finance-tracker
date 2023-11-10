@@ -18,7 +18,7 @@
         {% for plan in plan_list %}
         <tr>
             <th scope="row">
-                <label><input type="checkbox" name="plans_ids" value="{{ plan.id }}"></label>
+                <input type="checkbox" name="plans_ids" value="{{ plan.id }}" aria-label="Checkbox For Plan {{ plan.id}}">
             </th>
             <th scope="row"> {{ forloop.counter }}</th>
             <td><a href="{% url 'plan_detail' slug=plan.slug %}">{{ plan.name }}</a></td>
